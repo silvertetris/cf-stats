@@ -7,7 +7,7 @@ from app.utils.string_utils import Acronym, StringSlicer
 
 class User:
     """Singleton user model."""
-    name: str = ''
+    name: str = 'Hanlabong'
     organization: str = ''
     rating: int = 0
     rank: str = 'newbie'
