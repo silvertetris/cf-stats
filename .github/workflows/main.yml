@@ -36,9 +36,12 @@ jobs:
       # Install dependencies with `pip`
       - name: Install requirements
         run: |
-          python3 -m pip install --upgrade pip setuptools wheel
-          python3 -m pip install -r requirements.txt
-          pip install -e .
+          python -V
+          python -m pip -V
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install -r requirements.txt
+          python -m pip install -e .
+          python -c "import setuptools, pkg_resources; print('setuptools', setuptools.__version__); print('pkg_resources OK')"
 
       - name: create env file
         run: |
